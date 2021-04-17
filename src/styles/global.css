@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.background {
+  @apply h-screen w-screen flex justify-center bg-gray-200 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors p-10;
+}
+
+.paper {
+  @apply container shadow bg-white dark:bg-gray-700 transition-colors;
+}
+
+.link {
+  @apply text-lilacDark hover:text-lilac dark:text-lilac dark:hover:text-lilacLight transition-colors;
+}
+
+.text-secondary {
+  @apply text-gray-700 dark:text-gray-300;
+}
