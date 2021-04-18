@@ -1,4 +1,5 @@
 import React from "react"
+import { FaArrowLeft } from "react-icons/fa"
 import { MdEmail } from "react-icons/md"
 import { FaGithub } from "react-icons/fa"
 import { FaLinkedin } from "react-icons/fa"
@@ -9,6 +10,8 @@ import { FaResearchgate } from "react-icons/fa"
 const TextToIcon = ({ label }) => {
   const icon = () => {
     switch (label) {
+      case "leftarrow":
+        return <FaArrowLeft />
       case "email":
         return <MdEmail />
       case "github":

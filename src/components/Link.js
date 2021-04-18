@@ -11,7 +11,7 @@ const Link = ({ className, to, href, label }) => {
       className={className}
       to={to}
       href={href}
-      hex={theme === "dark" ? "#E9DBF2" : "#D3B5E5"}
+      hex={theme === "dark" ? "#C4B5FD" : "#A78BFA"}
     >
       <div className="link">{label}</div>
     </AniLink>
