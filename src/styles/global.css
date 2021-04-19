@@ -17,7 +17,7 @@
 }
 
 .background {
-  @apply h-screen w-screen bg-gray-200 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors;
+  @apply h-screen w-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-50 transition-colors;
 }
 
 .nav-text {
@@ -25,7 +25,7 @@
 }
 
 .paper {
-  @apply shadow bg-white dark:bg-gray-700 transition-colors;
+  @apply shadow bg-white dark:bg-gray-800 transition-colors;
 }
 
 .link {

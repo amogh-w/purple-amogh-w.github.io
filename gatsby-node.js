@@ -61,23 +61,23 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   general.forEach(({ node }, index) => {
     createPage({
       path: `/${node.slug}`,
-      component: path.resolve(`./src/templates/general.js`),
+      component: path.resolve(`./src/templates/page.js`),
       context: { id: node.id },
     })
   })
 
   projects.forEach(({ node }, index) => {
     createPage({
-      path: `/projects/${node.slug}`,
-      component: path.resolve(`./src/templates/general.js`),
+      path: `/${node.slug}`,
+      component: path.resolve(`./src/templates/page.js`),
       context: { id: node.id },
     })
   })
 
   publications.forEach(({ node }, index) => {
     createPage({
-      path: `/publications/${node.slug}`,
-      component: path.resolve(`./src/templates/general.js`),
+      path: `/${node.slug}`,
+      component: path.resolve(`./src/templates/page.js`),
       context: { id: node.id },
     })
   })
