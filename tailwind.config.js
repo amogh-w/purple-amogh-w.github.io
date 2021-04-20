@@ -10,6 +10,13 @@ module.exports = {
           primaryDark: "#8B5CF6",
         }
       },
+      borderColor(theme) {
+        return {
+          primaryLight: "#C4B5FD",
+          primary: "#A78BFA",
+          primaryDark: "#8B5CF6",
+        }
+      },
       typography(theme) {
         return {
           dark: {

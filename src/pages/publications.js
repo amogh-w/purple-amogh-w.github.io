@@ -1,11 +1,16 @@
 import React from "react"
 import { graphql } from "gatsby"
 import General from "../layouts/general"
+import PublicationCard from "../components/PublicationCard"
 
-const Publications = () => {
+const Publications = ({ data }) => {
   return (
     <General title="Publications">
-      <p>Publications</p>
+      <div className="grid xl:grid-cols-2 gap-4">
+        {data.publications.nodes.map(publication => {
+          return <PublicationCard publication={publication} />
+        })}
+      </div>
     </General>
   )
 }
@@ -13,12 +18,7 @@ const Publications = () => {
 export const query = graphql`
   query GetPublications {
     publications: allMdx(
-      filter: {
-        frontmatter: {
-          isHighlight: { eq: true }
-          contentType: { eq: "publication" }
-        }
-      }
+      filter: { frontmatter: { contentType: { eq: "publication" } } }
     ) {
       nodes {
         id
@@ -28,7 +28,14 @@ export const query = graphql`
           title
           authors
           pdf
+          link
           doi
+          journal
+          banner {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
+            }
+          }
         }
       }
     }

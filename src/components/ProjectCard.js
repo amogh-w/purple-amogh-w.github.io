@@ -6,9 +6,8 @@ import TextToIcon from "./TextToIcon"
 const ProjectCard = ({ project }) => {
   return (
     <div className="paper">
-      <div className="h-56 flex ">
+      <div className="h-56 flex">
         <GatsbyImage
-          className="object-cover"
           image={getImage(project.frontmatter.banner)}
           alt="banner"
         />
@@ -21,7 +20,7 @@ const ProjectCard = ({ project }) => {
             label={<TextToIcon label="github" />}
           />
         </div>
-        <div className="text-secondary text-sm md:text-sm lg:text-sm">
+        <div className="text-secondary text-sm lg:text-base">
           {project.excerpt}
         </div>
       </div>

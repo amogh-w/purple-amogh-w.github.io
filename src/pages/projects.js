@@ -4,7 +4,6 @@ import General from "../layouts/general"
 import ProjectCard from "../components/ProjectCard"
 
 const Projects = ({ data }) => {
-  console.log(data)
   return (
     <General title="Projects">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -30,7 +29,7 @@ export const query = graphql`
           githubLink
           banner {
             childImageSharp {
-              gatsbyImageData(placeholder: BLURRED)
+              gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
             }
           }
         }
