@@ -6,7 +6,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 const Page = ({ data: { mdx } }) => {
   return (
     <General title={mdx.frontmatter.title}>
-      <article class="prose dark:prose-dark md:prose-lg lg:prose-xl">
+      <article className="prose dark:prose-dark md:prose-lg lg:prose-xl">
         <MDXRenderer>{mdx.body}</MDXRenderer>
       </article>
     </General>
