@@ -1,17 +1,33 @@
 import React from "react"
-import { FaArrowLeft } from "react-icons/fa"
+import {
+  FaGithub,
+  FaHome,
+  FaLinkedin,
+  FaMedium,
+  FaResearchgate,
+} from "react-icons/fa"
 import { MdEmail } from "react-icons/md"
-import { FaGithub } from "react-icons/fa"
-import { FaLinkedin } from "react-icons/fa"
-import { FaMedium } from "react-icons/fa"
-import { SiGooglescholar } from "react-icons/si"
-import { FaResearchgate } from "react-icons/fa"
+import {
+  SiAmazonaws,
+  SiAndroid,
+  SiApple,
+  SiDocker,
+  SiGooglescholar,
+  SiGraphql,
+  SiJava,
+  SiMongodb,
+  SiNginx,
+  SiPython,
+  SiReact,
+  SiTensorflow,
+  SiTypescript,
+} from "react-icons/si"
 
 const TextToIcon = ({ label }) => {
   const icon = () => {
     switch (label) {
-      case "leftarrow":
-        return <FaArrowLeft />
+      case "home":
+        return <FaHome />
       case "email":
         return <MdEmail />
       case "github":
@@ -24,6 +40,30 @@ const TextToIcon = ({ label }) => {
         return <SiGooglescholar />
       case "researchgate":
         return <FaResearchgate />
+      case "java":
+        return <SiJava />
+      case "python":
+        return <SiPython />
+      case "android":
+        return <SiAndroid />
+      case "apple":
+        return <SiApple />
+      case "react":
+        return <SiReact />
+      case "graphql":
+        return <SiGraphql />
+      case "mongo":
+        return <SiMongodb />
+      case "tensorflow":
+        return <SiTensorflow />
+      case "docker":
+        return <SiDocker />
+      case "typescript":
+        return <SiTypescript />
+      case "nginx":
+        return <SiNginx />
+      case "aws":
+        return <SiAmazonaws />
       default:
         return <h1>error</h1>
     }

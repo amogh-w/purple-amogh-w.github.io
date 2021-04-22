@@ -8,7 +8,7 @@ const General = ({ title, children }) => {
       <Helmet title={title} />
       <Navbar title={title} />
       <div className="container overflow-auto no-scrollbar">
-        <div className="md:flex flex-col items-center mt-20 mb-6 p-4">
+        <div className="md:flex flex-col items-center mt-14 mb-6 p-4">
           {children}
         </div>
       </div>

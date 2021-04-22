@@ -18,6 +18,7 @@ const Projects = ({ data }) => {
 export const query = graphql`
   query GetProjects {
     projects: allMdx(
+      sort: { fields: frontmatter___date, order: DESC }
       filter: { frontmatter: { contentType: { eq: "project" } } }
     ) {
       nodes {
@@ -26,12 +27,13 @@ export const query = graphql`
         slug
         frontmatter {
           title
-          githubLink
+          github
           banner {
             childImageSharp {
               gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
             }
           }
+          tech
         }
       }
     }
