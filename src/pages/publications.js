@@ -8,7 +8,9 @@ const Publications = ({ data }) => {
     <General title="Publications">
       <div className="grid xl:grid-cols-2 gap-4">
         {data.publications.nodes.map(publication => {
-          return <PublicationCard publication={publication} />
+          return (
+            <PublicationCard key={publication.id} publication={publication} />
+          )
         })}
       </div>
     </General>
@@ -18,6 +20,7 @@ const Publications = ({ data }) => {
 export const query = graphql`
   query GetPublications {
     publications: allMdx(
+      sort: { fields: frontmatter___date, order: DESC }
       filter: { frontmatter: { contentType: { eq: "publication" } } }
     ) {
       nodes {

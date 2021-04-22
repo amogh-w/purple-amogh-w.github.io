@@ -11,6 +11,7 @@ import {
   SiAmazonaws,
   SiAndroid,
   SiApple,
+  SiCircleci,
   SiDocker,
   SiGooglescholar,
   SiGraphql,
@@ -64,6 +65,8 @@ const TextToIcon = ({ label }) => {
         return <SiNginx />
       case "aws":
         return <SiAmazonaws />
+      case "circleci":
+        return <SiCircleci />
       default:
         return <h1>error</h1>
     }

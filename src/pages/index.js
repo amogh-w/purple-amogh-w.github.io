@@ -82,12 +82,10 @@ const Index = ({ data }) => {
           <div className="flex justify-center text-2xl md:text-3xl lg:text-4xl">
             {profileData.socialLinks.map(link => {
               return (
-                <div className="m-2">
-                  <Link
-                    key={link.id}
-                    href={link.href}
-                    label={<TextToIcon label={link.label} />}
-                  />
+                <div className="m-2" key={link.id}>
+                  <a className="link" href={link.href}>
+                    <TextToIcon label={link.label} />
+                  </a>
                 </div>
               )
             })}

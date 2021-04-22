@@ -23,11 +23,12 @@ const PublicationCard = ({ publication }) => {
           {publication.excerpt}
         </div>
         <div className="flex justify-between text-sm lg:text-base font-semibold uppercase">
-          <Link
-            href={publication.frontmatter.link}
-            label={publication.frontmatter.doi}
-          />
-          <Link href={publication.frontmatter.pdf} label={"PDF"} />
+          <a className="link" href={publication.frontmatter.link}>
+            {publication.frontmatter.doi}
+          </a>
+          <a className="link" href={publication.frontmatter.pdf}>
+            PDF
+          </a>
         </div>
       </div>
     </div>
