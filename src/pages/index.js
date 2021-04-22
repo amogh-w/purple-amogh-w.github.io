@@ -51,11 +51,16 @@ const navLinks = [
   },
   {
     id: 2,
+    label: "Experience",
+    href: "/experience",
+  },
+  {
+    id: 3,
     label: "Projects",
     href: "/projects",
   },
   {
-    id: 3,
+    id: 4,
     label: "Publications",
     href: "/publications",
   },

@@ -33,7 +33,6 @@ export const query = graphql`
           pdf
           link
           doi
-          journal
           banner {
             childImageSharp {
               gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
