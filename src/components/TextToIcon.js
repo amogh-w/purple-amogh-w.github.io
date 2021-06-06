@@ -25,6 +25,7 @@ import {
   SiHtml5,
   SiJava,
   SiJavascript,
+  SiJenkins,
   SiLatex,
   SiMongodb,
   SiMysql,
@@ -33,6 +34,7 @@ import {
   SiPerl,
   SiPostgresql,
   SiPython,
+  SiR,
   SiReact,
   SiRuby,
   SiTensorflow,
@@ -62,6 +64,8 @@ const TextToIcon = ({ label }) => {
         return <SiJava />
       case "python":
         return <SiPython />
+      case "r":
+        return <SiR />
       case "android":
         return <SiAndroid />
       case "apple":
@@ -84,6 +88,8 @@ const TextToIcon = ({ label }) => {
         return <SiAmazonaws />
       case "circleci":
         return <SiCircleci />
+      case "jenkins":
+        return <SiJenkins />
       case "firebase":
         return <SiFirebase />
       case "html":

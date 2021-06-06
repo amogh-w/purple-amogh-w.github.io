@@ -3,9 +3,11 @@ import TextToIcon from "./TextToIcon"
 
 const data = [
   "python",
+  "r",
   "tensorflow",
   "docker",
   "circleci",
+  "jenkins",
   "aws",
   "html",
   "css",
